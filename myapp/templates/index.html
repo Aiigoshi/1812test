@@ -1,0 +1,94 @@
+<html>
+<header>
+</header>
+<body>
+  {{test}}
+  {% for i in test %}
+  <div class="vediodiv">
+    <a href="detail.html"><img src="images/poplar1.gif" alt="изображение" />
+        <span class="time">02:22</span>
+      </a>
+    <a href="#" class="addtoplaylist"><img src="images/plusicon.png" alt="изображение" /></a>
+  </div>
+  {% endfor %}
+
+
+<ul class="menu-bar">
+    <li>Watch Now</li>
+    <li>Movies</li>
+    <li>TV Shows</li>
+    <li>Sports</li>
+    <li>Kids</li>
+    <li><a href="http://127.0.0.1:8000/auth/">Личный кабинет</a></li>
+  </ul>
+  <img src="{% static 'my_app/example.jpg' %}" alt="My img">
+
+
+</body>
+</html>
+<style>
+    body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-image: url(https://kartinkin.net/pics/uploads/posts/2022-08/1660765124_60-kartinkin-net-p-bumboks-oboi-krasivo-70.jpg);
+}
+.vediodiv{
+  width:153px;
+	height:102px;
+	border:solid 1px #aaa;
+	text-align:center;
+	padding-top:3px;
+	color:#f0f0f0;
+	margin-bottom:5px;
+	position:relative;
+	line-height:16px;
+	padding-bottom:2px;
+  padding-top:23px;
+	width:661px;
+	float:left;
+}
+.menu-bar {
+  border-radius: 25px;
+  height: 50;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 0 10px;
+  margin: 50px 0 0 0;
+}
+.menu-bar li {
+  list-style: none;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 12px 16px;
+  margin: 0 8px;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.menu-bar li::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+.menu-bar li:hover {
+  color: black;
+}
+.menu-bar li:hover::before {
+  background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+  box-shadow: 0px 3px 20px 0px black;
+  transform: scale(1.2);
+}
+</style>
